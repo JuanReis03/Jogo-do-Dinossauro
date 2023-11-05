@@ -13,7 +13,7 @@ class Status():
 class Game(BaseImage):
     def __init__(self):
         self._hide()
-        self.personagem = Personagem(Frame.DinossauroParado, 100, 200)
+        self.personagem = Personagem(Frame.DinossauroParado, 80, 440)
         self.mensagemIniciar = Label(mensagemIniciar, 200, 200)
 
     def update(self):

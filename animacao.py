@@ -19,8 +19,8 @@ class Animacao(BaseImage):
         self._contador = Contador(intervalo)
         self._indice = 0
         self._file = arquivos[0]
-        self._x = 100
-        self._y = 200
+        self._x = 80
+        self._y = 440
     
     def update(self):
         self._contador.incrementa()

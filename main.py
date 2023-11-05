@@ -1,6 +1,7 @@
 from tupy import run
 # from personagem import Personagem
 from game import Game
+from background import *
 
 def main():
     Game()
