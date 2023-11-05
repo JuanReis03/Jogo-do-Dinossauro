@@ -5,8 +5,8 @@ from status import Status
 class Personagem(Image):
     def __init__(self, frame):
         self.file = frame
-        self.x = 100
-        self.y = 200
+        self.x = 80
+        self.y = 440
         self.pulando = False
         self.caindo = False
 
@@ -19,14 +19,14 @@ class Personagem(Image):
             self.pulando = True
             print(self.pulando)
             print(self.y)
-        if self.pulando and self.y >= 100: 
+        if self.pulando and self.y >= 340: 
             self.animacao._hide()
             self._show()
             self.y -= 10
         elif self.pulando:
             self.pulando = False
             self.caindo = True
-        if self.caindo and self.y <= 200:
+        if self.caindo and self.y <= 440:
             self.y += 10
         elif self.caindo:
             self._hide()
