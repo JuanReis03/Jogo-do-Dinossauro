@@ -1,28 +1,21 @@
 from tupy import *
+from animacao import Frame
 
-class Sky(Image):
-    def __init__(self, file, x, y, v):
-        # v é a velocidade
-        self.file = file
-        self.x = x
-        self.y = y
-        self.v = v
-
-    def update(self) -> None:
-        if(self.x - self.v) < -500:
-            self.x = 1450
-        else: 
-            self.x -= self.v
-        
 class Ground(Image):
-    def __init__(self, file, x, y, v):
-        self.file = file
+    def __init__(self, x, y):
+        self.file = Frame.Ground
         self.x = x 
         self.y = y 
-        self.v = v
+        self.v = 8
+        self._hide()
         
     def update(self) -> None:
         if (self.x - self.v) < -505:
             self.x = 1560
         else:
             self.x -= self.v
+
+    def animar(self) -> None:
+        self.v = 8         
+        self._show()
+
