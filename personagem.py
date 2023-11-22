@@ -33,6 +33,7 @@ class Personagem(BaseImage):
                 self._y += 10
             elif (self._caindo):
                 self._caindo = False
+
             
 
         
