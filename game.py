@@ -1,7 +1,10 @@
+from obstaculo import Obstaculo
 from personagem import Personagem
 from status import Status
 from background import Ground
 from tupy import BaseImage, keyboard, Label
+from animacao import Contador
+import random
 
 class Game(BaseImage):
     mensagemIniciar = "Pressione espaço para começar o jogo"
@@ -12,11 +15,28 @@ class Game(BaseImage):
         self.ground2 = Ground(-160, 510)
         self.personagem = Personagem()
         self.mensagemIniciar = Label(Game.mensagemIniciar, 200, 200)
+        self.obstaculo = Obstaculo()
+        self._contador = Contador(5)
 
     def update(self):
         if (not Status.executando and keyboard.is_key_just_down('space')):
             self.mensagemIniciar._hide()
             self.iniciar()
+
+        if (Status.executando):
+            if (self.deve_spawnar_obstaculo()):
+                self.obstaculo.deve_spawnar = True
+                # self.obstaculo = random.choice([Passaro(True), Cacto(True)])
+
+    def deve_spawnar_obstaculo(self):
+        if self._contador.esta_zerado():
+            deve_spawnar = random.choice([True, False])
+            self._contador = Contador(random.randint(10, 50))
+            self._contador.incrementa()
+            return deve_spawnar
+        else:
+            self._contador.incrementa()
+            return False
 
     def iniciar(self):
         Status.executando = True
