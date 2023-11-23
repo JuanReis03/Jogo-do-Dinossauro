@@ -56,7 +56,7 @@ class Game(BaseImage):
     def deve_spawnar_obstaculo(self):
         if self._contador.esta_zerado():
             deve_spawnar = random.choice([True, False])
-            self._contador = Contador(random.randint(10, 50))
+            self._contador = Contador(random.randint(25, 50))
             self._contador.incrementa()
             return deve_spawnar
         else:
