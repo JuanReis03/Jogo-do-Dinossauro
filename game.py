@@ -1,4 +1,4 @@
-from obstaculo import Obstaculo
+from obstaculo import *
 from personagem import Personagem
 from status import Status
 from background import Ground
@@ -25,13 +25,14 @@ class Game(BaseImage):
 
         if (Status.executando):
             if (self.deve_spawnar_obstaculo()):
-                self.obstaculo.deve_spawnar = True
-                # self.obstaculo = random.choice([Passaro(True), Cacto(True)])
+                #self.obstaculo.deve_spawnar = True
+                #self.obstaculo = random.choice([Passaro(True), Cacto(True)])
+                self.obstaculo = Passaro()
 
     def deve_spawnar_obstaculo(self):
         if self._contador.esta_zerado():
             deve_spawnar = random.choice([True, False])
-            self._contador = Contador(random.randint(10, 50))
+            self._contador = Contador(random.randint(25, 50))
             self._contador.incrementa()
             return deve_spawnar
         else:

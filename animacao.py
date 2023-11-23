@@ -3,6 +3,7 @@ from tupy import BaseImage, BaseTupyObject
 class Frame:
     Dinossauro = { 'parado': 'dino/dino-parado.png', 'correndo': ['dino/dino-frame01.png', 'dino/dino-frame02.png'] }
     Ground = 'background/chao.png'
+    Passaro =  ["dino/Bird2.png", "dino/Bird1.png"]
 
 class Contador:
     def __init__(self, maximo):
