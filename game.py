@@ -1,4 +1,4 @@
-from obstaculo import Obstaculo
+from obstaculo import *
 from personagem import Personagem
 from background import Ground
 from tupy import BaseImage, keyboard, Label

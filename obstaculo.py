@@ -1,6 +1,7 @@
 from status import Status
 from tupy import BaseImage
-
+import random
+from animacao import Frame
 class Obstaculo(BaseImage):
     posicao_inicial_x = 920
     posicao_inicial_y = 440
@@ -15,8 +16,10 @@ class Obstaculo(BaseImage):
         if (Status.executando):
             if (self.deve_spawnar):
                 self._x -= self.velocidade
-                if (self._x <= -20):
+                if (self._x <= -40):
+                    self._destroy()
                     self.deve_spawnar = False
+                    
                     self._x = Obstaculo.posicao_inicial_x
                     # self._destroy()
     
@@ -26,3 +29,13 @@ class Obstaculo(BaseImage):
         self._y = Obstaculo.posicao_inicial_y
         self.velocidade = 20
         self.deve_spawnar = False
+                    #self._x = Obstaculo.posicao_inicial_x
+                    
+
+class Cacto(Obstaculo):
+    def __init__(self):
+        super().__init__(True)
+        self._file = random.choice(Frame.Cacto)
+    #def update (self):
+        #super().update()
+        #self._destroy()
