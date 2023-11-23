@@ -4,6 +4,7 @@ class Frame:
     Dinossauro = { 'parado': 'dino/dino-parado.png', 'correndo': ['dino/dino-frame01.png', 'dino/dino-frame02.png'] }
     Ground = 'background/chao.png'
     Passaro =  ["dino/Bird2.png", "dino/Bird1.png"]
+    Cacto = ['cacto/LargeCactus1.png', 'cacto/LargeCactus2.png', 'cacto/LargeCactus3.png', 'cacto/SmallCactus1.png', 'cacto/SmallCactus2.png', 'cacto/SmallCactus3.png']
 
 class Contador:
     def __init__(self, maximo):
