@@ -21,28 +21,29 @@ class Game(BaseImage):
         self.pontuacao = 0
         self.recorde = 0
         self.mensagemPontuacao = Label(f'Pontos: {self.pontuacao}', 20, 20)
-        self.mensagemRecorde = Label(f'Recorde: self.recorde', 20, 50)
+        self.mensagemRecorde = Label(f'Recorde: {self.recorde}', 20, 50)
 
     def update(self):
         if (not Status.executando and keyboard.is_key_just_down('space')):
             self.mensagem_iniciar._hide()
-            self.iniciar()
-            
+            self.iniciar()    
 
         if (Status.executando):
             if (self.deve_spawnar_obstaculo()):
                 self.obstaculo.deve_spawnar = True
                 # self.obstaculo = random.choice([Passaro(True), Cacto(True)])
-            self.pontuacao += 1
-            self.mensagemPontuacao.text = f'Pontos: {self.pontuacao}'
+            
+            if Status.executando is True:
+              self.pontuacao += 1
+              self.mensagemPontuacao.text = f'Pontos: {self.pontuacao}'
             
             if self.pontuacao > self.recorde:
                 self.recorde = self.pontuacao
-                self.mensagemRecorde.text = f'Recorde: {self.recorde}'
+                self.mensagemRecorde.text = f'Recorde: {self.recorde}'           
 
             if (self.personagem._collides_with(self.obstaculo)):
-                self.game_over()
-    
+                self.game_over()             
+
     def game_over(self):
         Label(Game.mensagem_gameover, 440, 260, anchor='center')
         Status.executando = False
