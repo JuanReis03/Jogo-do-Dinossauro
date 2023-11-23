@@ -4,6 +4,7 @@ from background import *
 
 def main():
     g = Game()
+
     run(globals())
 
 if __name__ == '__main__':
