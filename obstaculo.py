@@ -19,3 +19,10 @@ class Obstaculo(BaseImage):
                     self.deve_spawnar = False
                     self._x = Obstaculo.posicao_inicial_x
                     # self._destroy()
+    
+    def reset(self):
+        # Resetar propriedades do obstáculo
+        self._x = Obstaculo.posicao_inicial_x
+        self._y = Obstaculo.posicao_inicial_y
+        self.velocidade = 20
+        self.deve_spawnar = False

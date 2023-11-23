@@ -20,4 +20,6 @@ class Ground(Image):
     def animar(self) -> None:
         self.v = 8         
         self._show()
+        
+
 

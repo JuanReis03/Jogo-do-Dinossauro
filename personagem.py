@@ -15,17 +15,16 @@ class Personagem(BaseImage):
         self._animacao = Animacao(Frame.Dinossauro['correndo'], 2)
         self._altura_pulo = Personagem.posicao_inicial_y - 100
         
-    def resetar(self):
+    def reset(self):
+        # Resetar propriedades do personagem
+        self._file = Frame.Dinossauro['parado']
         self._x = Personagem.posicao_inicial_x
         self._y = Personagem.posicao_inicial_y
         self._pulando = False
         self._caindo = False
         self._animacao = Animacao(Frame.Dinossauro['correndo'], 2)
         self._altura_pulo = Personagem.posicao_inicial_y - 100
-        self._file = Frame.Dinossauro['parado']
-        self._hide()
-           
-
+        self._hide()   
         
     def update(self) -> None:
         if (Status.executando):

@@ -8,7 +8,7 @@ import random
 
 class Game(BaseImage):
     mensagem_iniciar = "Pressione espaço para começar o jogo"
-    mensagem_gameover = "GAME OVER"
+    mensagem_gameover = "GAME OVER \nAperte R para reiniciar \nE espaço para começar novamente"
 
     def __init__(self):
         self._hide()
@@ -16,6 +16,7 @@ class Game(BaseImage):
         self.ground2 = Ground(-160, 510)
         self.personagem = Personagem()
         self.mensagem_iniciar = Label(Game.mensagem_iniciar, 440, 260, anchor='center')
+        # self.mensagem_gameover = Label(Game.mensagem_gameover, 440, 260, anchor='center')
         self.obstaculo = Obstaculo()
         self._contador = Contador(5)
         self.pontuacao = 0
@@ -26,26 +27,30 @@ class Game(BaseImage):
     def update(self):
         if (not Status.executando and keyboard.is_key_just_down('space')):
             self.mensagem_iniciar._hide()
-            self.iniciar()    
+            self.iniciar() 
+              
 
         if (Status.executando):
             if (self.deve_spawnar_obstaculo()):
                 self.obstaculo.deve_spawnar = True
                 # self.obstaculo = random.choice([Passaro(True), Cacto(True)])
             
-            if Status.executando is True:
-              self.pontuacao += 1
-              self.mensagemPontuacao.text = f'Pontos: {self.pontuacao}'
+            self.pontuacao += 1
+            self.mensagemPontuacao.text = f'Pontos: {self.pontuacao}'
             
             if self.pontuacao > self.recorde:
                 self.recorde = self.pontuacao
                 self.mensagemRecorde.text = f'Recorde: {self.recorde}'           
 
             if (self.personagem._collides_with(self.obstaculo)):
-                self.game_over()             
+                self.game_over()       
+        
+        if (not Status.executando and keyboard.is_key_just_down('r')):
+            self.reset() 
+                
 
     def game_over(self):
-        Label(Game.mensagem_gameover, 440, 260, anchor='center')
+        self.mensagem_gameover = Label(Game.mensagem_gameover, 440, 260, anchor='center')
         Status.executando = False
 
     def deve_spawnar_obstaculo(self):
@@ -67,4 +72,17 @@ class Game(BaseImage):
         if self.pontuacao > self.recorde:
             self.recorde = self.pontuacao
             self.mensagemRecorde.text = f'Recorde: {self.recorde}'
+        self.personagem._show()
+            
+    def reset(self):
+        self.pontuacao = 0
+        self.mensagemPontuacao.text = f'Pontos: {self.pontuacao}'
+        self.mensagemRecorde.text = f'Recorde: {self.recorde}'
+        self.personagem.reset()
+        self.obstaculo.reset()
+        self.mensagem_gameover._hide()
+        self.personagem = Personagem()
+        self.mensagem_iniciar = Label(Game.mensagem_iniciar, 440, 260, anchor='center')
+        
+  
 
