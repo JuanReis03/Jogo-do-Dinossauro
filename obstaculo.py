@@ -16,7 +16,7 @@ class Obstaculo(BaseImage):
         if (Status.executando):
             if (self.deve_spawnar):
                 self._x -= self.velocidade
-                if (self._x <= -40):
+                if (self._x <= -50):
                     self._destroy()
                     self.deve_spawnar = False
                     #self._x = Obstaculo.posicao_inicial_x
