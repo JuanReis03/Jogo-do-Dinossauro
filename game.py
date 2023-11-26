@@ -25,10 +25,14 @@ class Game(BaseImage):
         self.mensagem_recorde = Label(f'Recorde: {self.recorde}', 20, 50)
         self.gameover = False
         self.obstaculos = [Obstaculo]
+        self.velocidade_obstaculos = 20
+        self.periodo_minimo_spawn = 35
+        self.periodo_maximo_spawn = 50
 
     def set_obstaculo(self):
         if (self.deve_spawnar_obstaculo()):
             obstaculo_escolhido  = random.choice([Passaro, Cacto])
+            obstaculo_escolhido.velocidade = self.velocidade_obstaculos
             self.obstaculos.append(obstaculo_escolhido())
 
     def set_recorde(self)            :
@@ -48,6 +52,8 @@ class Game(BaseImage):
               
         if (Status.executando):
             self.set_obstaculo()
+            
+            self.velocidade_obstaculos = min(20 + self.pontuacao // 10, 80)
             
             self.pontuacao += 1
             self.mensagem_pontuacao.text = f'Pontos: {self.pontuacao}' 
