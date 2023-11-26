@@ -1,6 +1,6 @@
 from obstaculo import *
 from personagem import Personagem
-from background import Ground
+from background import *
 from tupy import BaseImage, keyboard, Label
 from animacao import Contador
 from status import Status
@@ -16,6 +16,7 @@ class Game(BaseImage):
         self._hide()
         self.ground = Ground(850, 510)
         self.ground2 = Ground(-160, 510)
+        self.nuvem = Nuvem(90, 440)
         self.personagem = Personagem()
         self._contador = Contador(5)
         self.pontuacao = 0
