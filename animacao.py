@@ -3,7 +3,7 @@ class Frame:
     Ground = 'background/chao.png'
     Passaro =  ["dino/Bird2.png", "dino/Bird1.png"]
     Cacto = ['cacto/LargeCactus1.png', 'cacto/LargeCactus2.png', 'cacto/LargeCactus3.png', 'cacto/SmallCactus1.png', 'cacto/SmallCactus2.png', 'cacto/SmallCactus3.png']
-
+    Nuvem = 'background/Cloud.png'
 class Contador:
     def __init__(self, maximo):
         self._maximo = maximo
