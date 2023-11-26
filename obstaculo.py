@@ -24,7 +24,7 @@ class Obstaculo(BaseImage):
                     self._destroy()
 
 class Passaro(Obstaculo):
-    posicoes=[330,460,410]
+    posicoes=[330,460,370]
     def __init__(self) -> None:
         super().__init__(True)
         self._y: int = random.choice(Passaro.posicoes)
