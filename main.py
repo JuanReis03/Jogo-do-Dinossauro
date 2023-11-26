@@ -3,7 +3,7 @@ from game import Game
 from background import *
 
 def main():
-    g = Game()
+    Game()
 
     run(globals())
 
