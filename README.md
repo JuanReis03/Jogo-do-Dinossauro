@@ -4,15 +4,15 @@
 
 ### Para jogar, basta apenas apertar a tecla espaço para começar, com ela também você ira realizar incriveis pulos para desviar dos obstaculos, caso não seja possível desviar pulando, voce irá usar a tecla ??? para se agachar. Para reiniciar o jogo, é so pressionar espaço novamente.
 
-* Francisco
-* ### Chico foi responsável por codar os obstaculos e algumas classes do personagem, como agachar e correr. Nota 5/5
-* Juan
-* ### Juan ficou responsável pela construção do brackground, função de resetar o jogo e a função do placar/recorde, entre. Nota 5/5
-* Lucca
-* ### Lucca foi responsável pela tipagem de grande parte do código, além de também ajudar na função de resetar o jogo e outras coisas mais. Nota 5/5
-* Rafael
-* ### Rafael ajudou na construção do código dos obstaculos e na reunião das imagens que usamos para animar os dinos. Nota 5/5
-* Vinicius
-* ### Vinicius foi responsável por construir parte das classes do projeto, como animação, game, status, dentre outros. Nota 5/5
+* ### Francisco
+* #### Chico foi responsável por codar os obstaculos e algumas classes do personagem, como agachar e correr. Nota 5/5
+* ### Juan
+* #### Juan ficou responsável pela construção do brackground, função de resetar o jogo e a função do placar/recorde, entre. Nota 5/5
+* ### Lucca
+* #### Lucca foi responsável pela tipagem de grande parte do código, além de também ajudar na função de resetar o jogo e outras coisas mais. Nota 5/5
+* ### Rafael
+* #### Rafael ajudou na construção do código dos obstaculos e na reunião das imagens que usamos para animar os dinos. Nota 5/5
+* ### Vinicius
+* #### Vinicius foi responsável por construir parte das classes do projeto, como animação, game, status, dentre outros. Nota 5/5
 
-## A construção do projeto se deu pelo trabalho em equipe de todos os membros da equipe, além das várias reuniões no Discord para discussão e realização do mesmo.
+### A construção do projeto se deu pelo trabalho em equipe de todos os membros da equipe, além das várias reuniões no Discord para discussão e realização do mesmo.
