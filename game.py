@@ -53,7 +53,7 @@ class Game(BaseImage):
         if (Status.executando):
             self.set_obstaculo()
             
-            self.velocidade_obstaculos = min(20 + self.pontuacao // 10, 80)
+            self.velocidade_obstaculos = min(20 + self.pontuacao // 5, 500)
             
             self.pontuacao += 1
             self.mensagem_pontuacao.text = f'Pontos: {self.pontuacao}' 
