@@ -1,6 +1,10 @@
 from obstaculo import *
 from personagem import Personagem
+<<<<<<< HEAD
 from background import GroundBase
+=======
+from background import *
+>>>>>>> 692452693a0ce6915e0f08d059bfdbe392872a6f
 from tupy import BaseImage, keyboard, Label
 from animacao import Contador
 from status import Status
@@ -19,6 +23,7 @@ class Game(BaseImage):
     def __init__(self):
         self._hide()
         self.ground = GroundBase()
+        self.nuvem = Nuvem(90, 440)
         self.personagem = Personagem()
         self._contador = Contador(5)
         self.pontuacao = 0
@@ -28,10 +33,14 @@ class Game(BaseImage):
         self.mensagem_recorde = Label(f'Recorde: {self.recorde}', 20, 50)
         self.gameover = False
         self.obstaculos = [Obstaculo]
+        self.velocidade_obstaculos = 20
+        self.periodo_minimo_spawn = 35
+        self.periodo_maximo_spawn = 50
 
     def set_obstaculo(self):
         if (self.deve_spawnar_obstaculo()):
             obstaculo_escolhido  = random.choice([Passaro, Cacto])
+            obstaculo_escolhido.velocidade = self.velocidade_obstaculos
             self.obstaculos.append(obstaculo_escolhido())
 
     def set_recorde(self)            :
@@ -51,6 +60,8 @@ class Game(BaseImage):
               
         if (Status.executando):
             self.set_obstaculo()
+            
+            self.velocidade_obstaculos = min(20 + self.pontuacao // 5, 500)
             
             self.pontuacao += 1
             self.mensagem_pontuacao.text = f'Pontos: {self.pontuacao}' 

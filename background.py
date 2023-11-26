@@ -31,4 +31,19 @@ class Ground(Image):
         self._show()
         
 
-
+class Nuvem(Image):
+    
+    def __init__(self, x, y) -> None:
+        self.x = x
+        self.y = y
+        self.velocidade = 12
+        self.file = Frame.Nuvem
+    
+    def update(self) -> None:
+        if (Status.executando):
+            #print('nuvem')
+            self.x -= self.velocidade
+            if (self._x <= -50):
+                self._destroy()
+                Nuvem(920, 200)
+            
