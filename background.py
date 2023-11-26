@@ -2,6 +2,15 @@ from tupy import *
 from animacao import Frame
 from status import Status
 
+class GroundBase():
+    def __init__(self):
+        self.ground = Ground(850, 510)
+        self.ground2 = Ground(-160, 510)
+
+    def animar(self):
+        self.ground.animar()
+        self.ground2.animar()
+
 class Ground(Image):
     def __init__(self, x, y):
         self.file = Frame.Ground

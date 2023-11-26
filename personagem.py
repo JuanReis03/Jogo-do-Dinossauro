@@ -23,7 +23,6 @@ class Personagem(BaseImage):
                 if keyboard.is_key_down('Down'):       
                     self._file = self._animacao.definir_frame(Frame.Dinossauro['abaixado'])
                 else:
-                    print('correndo')
                     self._file = self._animacao.definir_frame(Frame.Dinossauro['correndo'])
                 
                 if keyboard.is_key_just_down('space'):

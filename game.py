@@ -1,12 +1,16 @@
 from obstaculo import *
 from personagem import Personagem
-from background import Ground
+from background import GroundBase
 from tupy import BaseImage, keyboard, Label
 from animacao import Contador
 from status import Status
 import random
 
 class Game(BaseImage):
+    """
+        Classe que vai conter e gerenciar os itens do jogo.
+    """
+
     mensagem_iniciar = "Pressione espaço para começar o jogo"
     mensagem_gameover = "GAME OVER \nAperte espaço para começar novamente"
     periodo_minimo_spawn = 25
@@ -14,8 +18,7 @@ class Game(BaseImage):
 
     def __init__(self):
         self._hide()
-        self.ground = Ground(850, 510)
-        self.ground2 = Ground(-160, 510)
+        self.ground = GroundBase()
         self.personagem = Personagem()
         self._contador = Contador(5)
         self.pontuacao = 0
@@ -75,7 +78,6 @@ class Game(BaseImage):
     def iniciar(self):
         self.gameover = False
         self.ground.animar()
-        self.ground2.animar()
         self.pontuacao = 0
         Status.executando = True
             
