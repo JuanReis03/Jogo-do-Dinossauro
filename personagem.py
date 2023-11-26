@@ -38,7 +38,6 @@ class Personagem(BaseImage):
                 self._y = Personagem.posicao_inicial_y
                 self._caindo = False
                 self._velocidade_y = 0
-
             
 
         

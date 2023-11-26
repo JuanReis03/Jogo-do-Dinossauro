@@ -4,14 +4,14 @@ import random
 from animacao import Animacao, Frame
 
 class Obstaculo(BaseImage):
-    posicao_inicial_x = 960
-    posicao_inicial_y = 440
+    posicao_inicial_x: int = 920
+    posicao_inicial_y: int = 440
     
-    def __init__(self, deve_spawnar = False):
-        self._x = Obstaculo.posicao_inicial_x
-        self._y = Obstaculo.posicao_inicial_y
+    def __init__(self, deve_spawnar = False) -> None:
+        self._x: int = Obstaculo.posicao_inicial_x
+        self._y: int = Obstaculo.posicao_inicial_y
         self.velocidade = 20
-        self.deve_spawnar = deve_spawnar
+        self.deve_spawnar: bool = deve_spawnar
 
     def reset(self):
         self._hide()
@@ -25,20 +25,20 @@ class Obstaculo(BaseImage):
 
 class Passaro(Obstaculo):
     posicoes=[360,460,410]
-    def __init__(self):
+    def __init__(self) -> None:
         super().__init__(True)
-        self._y = random.choice(Passaro.posicoes)
-        self._animacao = Animacao(Frame.Passaro, 2)
-        self._file = self._animacao.definir_frame()
+        self._y: int = random.choice(Passaro.posicoes)
+        self._animacao: str = Animacao(Frame.Passaro, 2)
+        self._file: str = self._animacao.definir_frame()
     
     def update(self) -> None:
-        self._file = self._animacao.definir_frame()
+        self._file: str = self._animacao.definir_frame()
         super().update()
 
 class Cacto(Obstaculo):
     def __init__(self):
         super().__init__(True)
-        self._file = random.choice(Frame.Cacto)
+        self._file: str = random.choice(Frame.Cacto)
     
     def update (self):
         super().update()
