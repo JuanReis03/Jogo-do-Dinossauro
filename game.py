@@ -1,12 +1,16 @@
 from obstaculo import *
 from personagem import Personagem
-from background import *
+from background import GroundBase, Nuvem
 from tupy import BaseImage, keyboard, Label
 from animacao import Contador
 from status import Status
 import random
 
 class Game(BaseImage):
+    """
+        Classe que vai conter e gerenciar os itens do jogo.
+    """
+
     mensagem_iniciar = "Pressione espaço para começar o jogo"
     mensagem_gameover = "GAME OVER \nAperte espaço para começar novamente"
     periodo_minimo_spawn = 25
@@ -14,9 +18,8 @@ class Game(BaseImage):
 
     def __init__(self):
         self._hide()
-        self.ground = Ground(850, 510)
-        self.ground2 = Ground(-160, 510)
-        self.nuvem = Nuvem(90, 440)
+        self.ground = GroundBase()
+        self.nuvem = Nuvem()
         self.personagem = Personagem()
         self._contador = Contador(5)
         self.pontuacao = 0
@@ -27,8 +30,6 @@ class Game(BaseImage):
         self.gameover = False
         self.obstaculos = [Obstaculo]
         self.velocidade_obstaculos = 20
-        self.periodo_minimo_spawn = 35
-        self.periodo_maximo_spawn = 50
 
     def set_obstaculo(self):
         if (self.deve_spawnar_obstaculo()):
@@ -82,7 +83,6 @@ class Game(BaseImage):
     def iniciar(self):
         self.gameover = False
         self.ground.animar()
-        self.ground2.animar()
         self.pontuacao = 0
         Status.executando = True
             
