@@ -28,17 +28,17 @@ class Passaro(Obstaculo):
     def __init__(self) -> None:
         super().__init__(True)
         self._y: int = random.choice(Passaro.posicoes)
-        self._animacao: str = Animacao(Frame.Passaro, 2)
-        self._file: str = self._animacao.definir_frame()
+        self._animacao: str = Animacao(2)
+        self._file: str = self._animacao.definir_frame(Frame.Passaro)
     
     def update(self) -> None:
-        self._file: str = self._animacao.definir_frame()
+        self._file: str = self._animacao.definir_frame(Frame.Passaro)
         super().update()
 
 class Cacto(Obstaculo):
     def __init__(self):
         super().__init__(True)
-        self._file: str = random.choice(Frame.Cacto)
+        self._file = random.choice(Frame.Cacto)
     
     def update (self):
         super().update()
