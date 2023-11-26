@@ -8,7 +8,7 @@
  #### Chico foi responsável por ajudar a codar os obstaculos e algumas classes do personagem, como agachar e correr. Nota 5/5
 * ### Juan Reis dos Santos, Matrícula: 222115770.
  #### Juan ficou responsável pela construção do brackground, função de resetar o jogo e a função do placar/recorde, entre outras. Nota 5/5
-* ### Lucca Davi
+* ### Lucca Davi Sousa Denesenschi, Matrícula 222211719.
  #### Lucca foi responsável pela tipagem de grande parte do código, além de também ajudar na função de resetar o jogo e outras coisas mais. Nota 5/5
 * ### Rafael Lins Queiroz dos Santos, Matrícula: 222216224.
  #### Rafael ajudou na construção do código dos obstaculos e na reunião das imagens que usamos para animar os dinos, além de ajudar em várias outras partes do projeto. Nota 5/5
