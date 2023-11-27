@@ -5,15 +5,15 @@
 
 #### Para jogar, basta apenas apertar a tecla espaço para começar, com ela você também será capaz de realizar incriveis pulos para desviar dos obstaculos, caso não seja possível desviar pulando, voce irá usar a tecla down (setinha para baixo) para se agachar. Para reiniciar o jogo, é so pressionar espaço novamente.
 
-* ### Francisco Santos Carvalho, Matrícula: 222118878.
+* ### Francisco Santos Carvalho
  Chico foi responsável por ajudar a codar os obstaculos e algumas classes do personagem, como agachar e correr. Nota 5/5
-* ### Juan Reis dos Santos, Matrícula: 222115770.
+* ### Juan Reis dos Santos
  Juan ficou responsável pela construção do brackground, função de resetar o jogo e a função do placar/recorde, entre outras. Nota 5/5
-* ### Lucca Davi Sousa Denesenschi, Matrícula 222211719.
+* ### Lucca Davi Sousa Denesenschi
  Lucca foi responsável pela tipagem de grande parte do código, além de também ajudar na função de resetar o jogo e outras coisas mais. Nota 5/5
-* ### Rafael Lins Queiroz dos Santos, Matrícula: 222216224.
+* ### Rafael Lins Queiroz dos Santos
  Rafael ajudou na construção do código dos obstaculos e na reunião das imagens que usamos para animar os dinos, melhoria no pulo além de ajudar em várias outras partes do projeto. Nota 5/5
-* ### Vinicius da Silva Coutinho, Matrícula: 221215966.
+* ### Vinicius Coutinho
  Vinicius foi responsável por construir boa parte das classes do projeto, como animação, game, status, personagem, obstáculo dentre várias outras coisas. Nota 5/5
 
 ### _A construção do projeto se deu pelo trabalho em equipe de todos os membros, além das várias reuniões no Discord para discussão e realização do mesmo._
