@@ -2,7 +2,7 @@ from tupy import run
 from game import Game
 from background import *
 
-def main():
+def main() -> None:
     Game()
 
     run(globals())

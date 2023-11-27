@@ -3,11 +3,14 @@ from tupy import BaseImage, keyboard
 from status import Status
 
 class Personagem(BaseImage):
-    POSICAO_INICIAL_X = 80
-    POSICAO_INICIAL_Y = 440
+    """
+        Classe do personagem do game.
+    """
+    POSICAO_INICIAL_X: int = 80 
+    POSICAO_INICIAL_Y: int = 440
 
-    def __init__(self):
-        self._file = Frame.Dinossauro['parado']
+    def __init__(self) -> None:
+        self._file = Frame.Dinossauro_parado
         self._x = Personagem.POSICAO_INICIAL_X
         self._y = Personagem.POSICAO_INICIAL_Y
         self._pulando = False

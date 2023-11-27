@@ -3,16 +3,20 @@ from animacao import Frame
 from status import Status
 
 class GroundBase():
-    def __init__(self):
+    """
+        Classe que gerencia a animação do background
+    """
+
+    def __init__(self) -> None:
         self.ground = Ground(850, 510)
         self.ground2 = Ground(-160, 510)
 
-    def animar(self):
+    def animar(self) -> None:
         self.ground.animar()
         self.ground2.animar()
 
 class Ground(BaseImage):
-    def __init__(self, x, y):
+    def __init__(self, x: int, y: int) -> None:
         self._file = Frame.Ground
         self._x = x 
         self._y = y
@@ -32,8 +36,10 @@ class Ground(BaseImage):
         
 
 class Nuvem(BaseImage):
-    
-    def __init__(self, x = 90, y = 440) -> None:
+    """
+        Classe que gerencia a animação da nuvem
+    """
+    def __init__(self, x: int = 90, y: int = 440) -> None:
         self._x = x 
         self._y = y
         self._velocidade = 12

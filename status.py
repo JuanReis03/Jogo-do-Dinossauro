@@ -1,7 +1,5 @@
 class Status():
+    """
+        Classe que irá manter o estado de execução do game.
+    """
     executando = False
-    
-    @classmethod
-    def reset(cls):
-        # Resetar o estado da classe Status
-        cls.executando = False

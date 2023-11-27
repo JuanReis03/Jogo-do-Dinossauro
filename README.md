@@ -11,9 +11,9 @@
 * ### Lucca Davi Sousa Denesenschi, Matrícula 222211719.
  #### Lucca foi responsável pela tipagem de grande parte do código, além de também ajudar na função de resetar o jogo e outras coisas mais. Nota 5/5
 * ### Rafael Lins Queiroz dos Santos, Matrícula: 222216224.
- #### Rafael ajudou na construção do código dos obstaculos e na reunião das imagens que usamos para animar os dinos, além de ajudar em várias outras partes do projeto. Nota 5/5
+ #### Rafael ajudou na construção do código dos obstaculos e na reunião das imagens que usamos para animar os dinos, melhoria no pulo além de ajudar em várias outras partes do projeto. Nota 5/5
 * ### Vinicius da Silva Coutinho, Matrícula: 221215966.
- #### Vinicius foi responsável por construir boa parte das classes do projeto, como animação, game, status, personagem, dentre várias outras coisas. Nota 5/5
+ #### Vinicius foi responsável por construir boa parte das classes do projeto, como animação, game, status, personagem, obstáculo dentre várias outras coisas. Nota 5/5
 
 ### _A construção do projeto se deu pelo trabalho em equipe de todos os membros, além das várias reuniões no Discord para discussão e realização do mesmo._
 

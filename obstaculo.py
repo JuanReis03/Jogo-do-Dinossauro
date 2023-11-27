@@ -4,6 +4,9 @@ import random
 from animacao import Animacao, Frame
 
 class Obstaculo(BaseImage):
+    """
+        Classe que base dos obstáculos
+    """
     posicao_inicial_x: int = 920
     posicao_inicial_y: int = 440
     
@@ -13,7 +16,7 @@ class Obstaculo(BaseImage):
         self.velocidade = 20
         self.deve_spawnar: bool = deve_spawnar
 
-    def reset(self):
+    def reset(self) -> None:
         self._hide()
     
     def update(self) -> None:
@@ -24,21 +27,24 @@ class Obstaculo(BaseImage):
                     self._destroy()
 
 class Passaro(Obstaculo):
+    """
+        Subclasse obstáculo de tipo Passaro
+    """
     posicoes=[330,460,370]
     def __init__(self) -> None:
         super().__init__(True)
         self._y: int = random.choice(Passaro.posicoes)
-        self._animacao: str = Animacao(2)
+        self._animacao: Animacao = Animacao(2)
         self._file: str = self._animacao.definir_frame(Frame.Passaro)
     
     def update(self) -> None:
-        self._file: str = self._animacao.definir_frame(Frame.Passaro)
+        self._file = self._animacao.definir_frame(Frame.Passaro)
         super().update()
 
 class Cacto(Obstaculo):
-    def __init__(self):
+    """
+        Subclasse obstáculo de tipo Cacto
+    """    
+    def __init__(self) -> None:
         super().__init__(True)
         self._file = random.choice(Frame.Cacto)
-    
-    def update (self):
-        super().update()
